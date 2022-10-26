@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <div class="container">
+        <header id="head">
+          <h3 id="title">Password Generator</h3>   
+        </header>
+        <main>
+          <div class="output">
+            <p id="pass"></p>
+          </div>
+          <div class="input">
+            <div>
+               <label 
+               id="error" 
+               class="err"></label>  
+            </div>
+            <div>
+              <label>Length:</label>
+              6<input 
+               type="range"
+               id="slider"      
+               value="6" 
+               min="6" 
+               max="15"
+               onchange="updateSlider(this.value)">15
+              <span style=
+              "background: blue; float: right; 
+               padding: 10px;
+               margin-right: 16px;
+               border-radius: 50%;
+               font-size: 22px;"
+               id="sliderAmount">6
+               </span>
+            </div>
+            
+            <div>
+              <input type="checkbox" name="uppercase" id="uppercase">
+              <label for="uppercase">Uppercase</label>     
+            </div>
+             
+            <div>
+              <input type="checkbox" name="lowercase" id="lowercase">
+              <label>Lowercase</label>     
+            </div>
+              
+            <div>
+              <input type="checkbox" name="number" id="number">
+              <label>Number</label>     
+            </div>
+            <div>
+                <input type="checkbox" name="symbol" id="symbol">
+            <label>Symbol</label>
+            </div>  
+            
+          </div>
+          <div class="activity">
+            <span id="copy">Copy</span><span id="delete">Delete</span>
+          </div>
+          <div class="generator">
+            <button id="button">Generate Password</button>
+          </div>
+        </main>
+        
+      </div>
+
+<script type="text/javascript" src="main.js"></script>
+
+
+  </body>
+
+  </html>
